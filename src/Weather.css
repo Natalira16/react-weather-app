@@ -1,0 +1,197 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* HEADER */
+
+.header {
+    margin: 0 auto 20px;
+}
+
+.city {
+    color: rgba(98, 97, 97, 0.8);
+}
+
+.city:not(:last-child) {
+    padding-right: 15px;
+}
+
+
+/* SEARCH FORM */
+
+.search-group {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.Weather .form-control {
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    padding: 7px;
+    margin: 0 5px 0 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(22, 81, 171, 0.6);
+}
+
+.Weather input::placeholder {
+    font-style: italic;
+    font-weight: 100;
+    color: rgb(180, 180, 180);
+}
+
+.Weather button {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.Weather button:hover,
+.Weather button:focus {
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    border: none;
+    outline: none;
+}
+
+.Weather .btn-search {
+    background-color: rgb(69, 154, 250);
+    border-radius: 2px;
+    color: #fff;
+    padding: 7px;
+    margin: 0 5px 0 0;
+}
+
+.Weather .btn-current {
+    background-color: rgb(49, 202, 80);
+    border-radius: 2px;
+    color: #fff;
+    padding: 7px;
+}
+
+
+/* MAIN-CONTENT */
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+
+/* CARD-RIGHT */
+
+.Weather .title {
+    font-size: 36px;
+    font-weight: 400;
+    color: rgb(22, 81, 171);
+    margin: 20px auto 5px;
+    box-sizing: border-box;
+    display: block;
+    line-height: 40px;
+    text-align: left;
+}
+
+.Weather ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Weather li {
+    box-sizing: border-box;
+    color: rgba(98, 97, 97, 0.8);
+    display: block;
+    font-size: 12px;
+}
+
+
+/* CARD-LEFT */
+
+.items {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0 0 0;
+}
+
+.icon-item img {
+    margin-right: 10px;
+    opacity: 0.8;
+}
+
+
+/* TEXT-ITEMS */
+
+.main-text {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-title {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+    color: rgb(22, 81, 171);
+    margin: 0 5px 0 0;
+}
+
+.temp-links {
+    text-decoration: none;
+}
+
+.unitC,
+.unitF,
+.vertical-bar {
+    font-size: 14px;
+    font-weight: 100;
+    color: rgba(98, 97, 97, 0.8);
+}
+
+.active {
+    cursor: default;
+    font-weight: 400;
+    color: rgb(22, 81, 171);
+}
+
+.temp-links .active:hover,
+.temp-links .active:focus {
+    text-decoration: none;
+}
+
+
+/* DESCRIPTION-ITEMS */
+
+.desc-items {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+li.item {
+    font-size: 10px;
+}
