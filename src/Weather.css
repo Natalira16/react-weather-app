@@ -195,3 +195,10 @@ li {
 li.item {
     font-size: 10px;
 }
+
+
+/* LOADER */
+
+.ThreeDots {
+    justify-content: center;
+}
