@@ -9,10 +9,10 @@ export default function Weather(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
     const [city, setCity] = useState(props.defaultCity);
     function handleResponse(response) {
-        console.log(response.data);
 
         setWeatherData({
             ready: true,
+            coordinates: response.data.coord,
             city: response.data.name,
             country: response.data.sys.country,
             temperature: response.data.main.temp,
@@ -26,7 +26,7 @@ export default function Weather(props) {
     }
 
     function search() {
-        const apiKey = "c9470fa529ce6770f386cc31e17d6a25";
+        let apiKey = "cd4b2f49c94d858889bcba1e27be6e2d";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
     }
@@ -50,7 +50,7 @@ export default function Weather(props) {
                     <button type="button" className="btn-current" id="btn-current">Current</button>
                 </form>
                 <WeatherInfo data={weatherData} />
-                <WeatherForecast />
+                <WeatherForecast coordinates={weatherData.coordinates} />
             </div>
         )
     } else {
