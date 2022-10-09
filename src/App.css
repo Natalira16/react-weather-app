@@ -71,11 +71,11 @@ a:focus {
 
   /* .hide:not(last-child) {
     margin-right: 10px;
-  }
+  }*/
 
-  .hide:last-child {
+  .col:last-child {
     display: none;
-  } */
+  }
 
   .title {
     font-size: 28px;
