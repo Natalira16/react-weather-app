@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
 import "./Weather.css";
@@ -49,6 +50,7 @@ export default function Weather(props) {
                     <button type="button" className="btn-current" id="btn-current">Current</button>
                 </form>
                 <WeatherInfo data={weatherData} />
+                <WeatherForecast />
             </div>
         )
     } else {
