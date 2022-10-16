@@ -28,13 +28,15 @@ export default function WeatherForecast(props) {
                                     <WeatherForecastDay data={dailyForecast} />
                                 </div>
                             )
+                        } else {
+                            return null;
                         }
                     })}
                 </div>
             </div>
         )
     } else {
-        let apiKey = "cd4b2f49c94d858889bcba1e27be6e2d";
+        let apiKey = "be9291ab9163993dc8bcac7452d9e270";
         let longitude = props.coordinates.lon;
         let latitude = props.coordinates.lat;
         let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=metric`;
