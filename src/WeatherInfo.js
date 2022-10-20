@@ -22,7 +22,7 @@ export default function WeatherInfo(props) {
                         </div>
                         <div className="text-items">
                             <div>
-                                <WeatherTemperature celsius={props.data.temperature} />
+                                <WeatherTemperature celsius={props.data.temperature} fahrenheit={(props.data.temperature * 9 / 5) + 32} />
                             </div>
                             <div className="desc-items">
                                 <ul>

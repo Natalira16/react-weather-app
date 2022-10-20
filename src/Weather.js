@@ -26,7 +26,7 @@ export default function Weather(props) {
     }
 
     function search() {
-        let apiKey = "667d9f573c8af4c33457be5d561a9148";
+        let apiKey = "cd4b2f49c94d858889bcba1e27be6e2d";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
     }
@@ -41,13 +41,25 @@ export default function Weather(props) {
         setCity(event.target.value);
     }
 
+    function searchLocation(position) {
+        let apiKey = "cd4b2f49c94d858889bcba1e27be6e2d";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+        axios.get(apiUrl).then(handleResponse);
+    }
+
+    function getCurrentLocation(event) {
+        event.preventDefault();
+        navigator.geolocation.getCurrentPosition(searchLocation);
+    }
+
     if (weatherData.ready) {
         return (
             <div className="Weather">
                 <form className="search-group" onSubmit={handleSubmit}>
                     <input type="search" autoComplete="off" autoFocus="on" className="form-control" id="form-control" placeholder="Enter a city..." aria-label="Search" onChange={handleCityChange}></input>
-                    <button type="button" className="btn-search" id="btn-search">Search</button>
-                    <button type="button" className="btn-current" id="btn-current">Current</button>
+                    <button type="button" className="btn-search" id="btn-search" onClick={handleSubmit}>Search</button>
+                    <button type="button" className="btn-current" id="btn-current" onClick={getCurrentLocation}>Current</button>
                 </form>
                 <WeatherInfo data={weatherData} />
                 <WeatherForecast coordinates={weatherData.coordinates} />
@@ -68,3 +80,4 @@ export default function Weather(props) {
         );
     }
 }
+
