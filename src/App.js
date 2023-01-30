@@ -17,7 +17,7 @@ export default function App() {
         <Weather defaultCity="Kyiv" />
       </div>
       <footer className="footer">
-        This project was coded by <a href="https://funny-mooncake-671b77.netlify.app/" target="_blank" rel="noreferrer" className="footer-link">Nataliia Medvedenko</a>. It is <a href="https://github.com/Natalira16/react-weather-app" target="_blank" rel="noreferrer" className="footer-link">open-sourced on GitHub</a> and <a href="https://endearing-quokka-bcf784.netlify.app/" target="_blank" rel="noreferrer" className="footer-link">hosted on Netlify</a>.
+        This project was coded by <a href="https://nataliiamedvedenko.netlify.app/index.html" target="_blank" rel="noreferrer" className="footer-link">Nataliia Medvedenko</a>. It is <a href="https://github.com/Natalira16/react-weather-app" target="_blank" rel="noreferrer" className="footer-link">open-sourced on GitHub</a> and <a href="https://endearing-quokka-bcf784.netlify.app/" target="_blank" rel="noreferrer" className="footer-link">hosted on Netlify</a>.
       </footer>
     </div>
   );
